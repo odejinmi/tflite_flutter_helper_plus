@@ -34,7 +34,7 @@ TensorImage tensorImage = TensorImage.fromFile(imageFile);
 tensorImage = imageProcessor.process(tensorImage);
 ```
 
-Sample app: [Image Classification](https://github.com/am15h/tflite_flutter_helper/tree/master/example/image_classification)
+Sample app: [Image Classification](https://github.com/odejinmi/tflite_flutter_helper_plus/tree/master/example/image_classification)
 
 ### Basic audio data processing
 
@@ -48,7 +48,7 @@ tensorAudio.loadShortBytes(audioBytes);
 TensorBuffer inputBuffer = tensorAudio.tensorBuffer;
 ```
 
-Sample app: [Audio Classification](https://github.com/am15h/tflite_flutter_helper/tree/master/example/audio_classification)
+Sample app: [Audio Classification](https://github.com/odejinmi/tflite_flutter_helper_plus/tree/master/example/audio_classification)
 
 ### Create output objects and run the model
 
@@ -163,7 +163,7 @@ final classifier = await NLClassifier.createFromAsset('assets/$_modelFileName',
 List<Category> predictions = classifier.classify(rawText);
 ```
 
-Sample app: [Text Classification](https://github.com/am15h/tflite_flutter_helper/tree/master/example/text_classification_task).
+Sample app: [Text Classification](https://github.com/odejinmi/tflite_flutter_helper_plus/tree/master/example/text_classification_task).
 
 ### Integrate BERT natural language classifier
 
@@ -184,4 +184,4 @@ final bertQuestionAnswerer = await BertQuestionAnswerer.createFromAsset('assets/
 List<QaAnswer> answeres = bertQuestionAnswerer.answer(context, question);
 ```
 
-Sample app: [Bert Question Answerer Sample](https://github.com/am15h/tflite_flutter_helper/tree/master/example/bert_question_answer)
+Sample app: [Bert Question Answerer Sample](https://github.com/odejinmi/tflite_flutter_helper_plus/tree/master/example/bert_question_answer)
