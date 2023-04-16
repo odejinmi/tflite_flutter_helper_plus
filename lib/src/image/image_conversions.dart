@@ -14,6 +14,7 @@ class ImageConversions {
 
     int h = rgb.getHeight(shape);
     int w = rgb.getWidth(shape);
+    // Image image = Image(width:w, height:h);
     Image image = Image(w, h);
 
     List<int> rgbValues = buffer.getIntList();
@@ -45,9 +46,10 @@ class ImageConversions {
     const grayscale = ColorSpaceType.grayscale;
     grayscale.assertShape(shape);
 
-    final image = Image.fromBytes(grayscale.getWidth(shape),
-        grayscale.getHeight(shape), uint8Buffer.getBuffer().asUint8List(),
-        format: Format.luminance);
+    // final image = Image.fromBytes(width: grayscale.getWidth(shape), height: grayscale.getHeight(shape),
+    //     bytes: uint8Buffer.getBuffer(), format: Format.luminance);
+final image = Image.fromBytes(grayscale.getWidth(shape), grayscale.getHeight(shape),
+        uint8Buffer.getBuffer().asUint8List(), format: Format.luminance);
 
     return image;
   }
